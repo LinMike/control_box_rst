@@ -45,6 +45,9 @@ void TimeSeries::reserve(int time_dim, int value_dim)
     _values.reserve(time_dim * value_dim);
 }
 
+/**
+ * @brief 添加状态向量和对应的时间，后面加入的向量的维度必须和第一个一致。内部使用一维数组存储状态向量。
+ */
 bool TimeSeries::add(double time, const std::vector<double>& values)
 {
     if (values.empty()) return true;

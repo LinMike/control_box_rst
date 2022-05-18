@@ -179,6 +179,9 @@ void StructuredOptimalControlProblem::setStateBounds(const Eigen::VectorXd& x_lb
     // TODO(roesmann): ocp modified?! we just changed bounds and not dimensions
 }
 
+/**
+ * @brief 设置控制参数[速度， 转角]的上下界约束
+ */
 void StructuredOptimalControlProblem::setControlBounds(const Eigen::VectorXd& u_lb, const Eigen::VectorXd& u_ub)
 {
     _functions.u_lb = u_lb;

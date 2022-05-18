@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.1)
 project(control_box_rst)
+# message(STATUS "current cmake dir = ${CMAKE_SOURCE_DIR}")
+set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR}/install)
 
 set(MESSAGE_SUPPORT OFF CACHE BOOL "Message support (downloads and compiles Protobuf)" FORCE)
 set(RPC_SUPPORT OFF CACHE BOOL "Network communication (downloads and comiles gRPC, requires MESSAGE_SUPPORT" FORCE)
